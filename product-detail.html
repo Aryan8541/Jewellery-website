@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Product - Lumina Jewels</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dark-theme-body">
+
+
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+           <!-- 🎯 REPLACE ONLY LINES 14 THROUGH 16 WITH THIS: -->
+        <div class="logo-branding-premium" onclick="window.location.href='index.html'">
+            <svg class="brand-illustration" viewBox="0 0 100 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M42 42C51.3888 42 59 34.3888 59 25C59 15.6112 51.3888 8 42 8C32.6112 8 25 15.6112 25 25C25 34.3888 32.6112 42 42 42Z" stroke="#3a3f58" stroke-width="1.2" stroke-dasharray="0.5 1"/>
+                <path d="M26 20C27 15 32 10 39 9" stroke="#3a3f58" stroke-width="1" stroke-linecap="round"/>
+                <path d="M57 22C56 16 52 11 46 9" stroke="#3a3f58" stroke-width="1" stroke-linecap="round"/>
+                <path d="M56 50C64.2843 50 71 43.2843 71 35C71 26.7157 64.2843 20 56 20C47.7157 20 41 26.7157 41 35C41 43.2843 47.7157 50 56 50Z" stroke="#3a3f58" stroke-width="1.2"/>
+                <path d="M44 42C48 47 55 49 62 47" stroke="#c5a059" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 2"/>
+                <path d="M42 12L34 5L42 -2L50 5L42 12Z" fill="#ffffff" stroke="#3a3f58" stroke-width="1.2"/>
+                <path d="M42 -2V12M34 5H50M37 1.5L47 8.5M37 8.5L47 1.5" stroke="#3a3f58" stroke-width="0.6"/>
+                <path d="M33.5 5.5L35.5 3.5M50.5 5.5L48.5 3.5M42 -2.5V0.5" stroke="#3a3f58" stroke-width="1.5"/>
+                <circle cx="29" cy="6" r="0.6" fill="#c5a059"/>
+                <circle cx="53" cy="14" r="0.5" fill="#c5a059"/>
+                <circle cx="21" cy="24" r="0.4" fill="#3a3f58"/>
+            </svg>
+            <div class="brand-text-luxury">
+                <h1 class="brand-title-cursive">Lumina</h1>
+                <span class="brand-subtitle-modern">jewels</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <a href="index.html#products">Products</a>
+            <span>/</span>
+            <span id="breadcrumbProduct">Product</span>
+        </div>
+    </div>
+
+    <!-- PRODUCT DETAIL SECTION -->
+     <div class="lux-breadcrumb-bar">
+
+    <a href="index.html">Home</a>
+
+    <span>/</span>
+
+    <a href="products.html">Products</a>
+
+    <span>/</span>
+
+    <span id="breadcrumbProduct">Product</span>
+
+</div>
+  <main class="lux-product-wrapper">
+    <div class="lux-container">
+        <div class="lux-product-grid">
+            
+            <div class="lux-left-column">
+                <div class="lux-gallery">
+                    <div class="lux-main-image-container">
+                        <img id="mainImage" src="" alt="Product Image" class="lux-main-image" onclick="openLightboxCarousel()">
+                    </div>
+                    <div class="thumbnail-images"></div>
+                     </div>
+
+                <div class="lux-tabs-container">
+                    <div class="lux-tabs-header">
+                        <button class="lux-tab-btn active" onclick="switchLuxTab(event, 'desc')">DESCRIPTION</button>
+                        <button class="lux-tab-btn" onclick="switchLuxTab(event, 'specs')">SPECIFICATIONS</button>
+                        <button class="lux-tab-btn" onclick="switchLuxTab(event, 'ship')">SHIPPING</button>
+                    </div>
+                    <div class="lux-tab-content-wrapper">
+                        <div id="desc" class="lux-tab-pane active"><p id="productDescription"></p></div>
+                        <div id="specs" class="lux-tab-pane">
+    <table style="width:100%; color:#b5ac9d;">
+
+        <tr>
+            <td>Material</td>
+            <td id="specMaterial" style="text-align:right;"></td>
+        </tr>
+
+        <tr>
+            <td>Weight</td>
+            <td id="specWeight" style="text-align:right;"></td>
+        </tr>
+
+        <!-- ADD THESE 2 -->
+
+        <tr>
+            <td>Dimensions</td>
+            <td id="specDimensions" style="text-align:right;"></td>
+        </tr>
+
+        <tr>
+            <td>Collection</td>
+            <td id="specCollection" style="text-align:right;"></td>
+        </tr>
+    </table>
+</div>
+                       
+                        <div id="ship" class="lux-tab-pane"><p>Free shipping on orders over ₹1000.</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lux-right-column">
+                <div class="lux-info-card">
+                    <span id="productCategory" class="lux-badge" style="display:inline-block; padding:4px 12px; border:1px solid #c5a059; color:#c5a059; border-radius:20px; font-size:0.75rem; margin-bottom:1rem;"></span>
+                    <h1 class="lux-title" id="productTitle"></h1>
+                    <div class="lux-divider" style="width:60px; height:1.5px; background:#c5a059; margin-bottom:1.5rem;"></div>
+                    <span class="lux-price" id="productPrice" style="font-size:2rem; color:#c5a059;"></span>
+                    <div class="lux-rating-section" style="margin-top:20px;">
+
+  <div id="productStars" style="color:#c5a059; font-size:1.1rem;">
+</div> 
+ <div style="margin-top:8px; color:#b5ac9d;">
+        <span id="ratingText"></span>
+    </div>
+
+    <div style="margin-top:6px; color:#b5ac9d;">
+        Average Rating:
+        <span id="avgRating"></span>
+    </div>
+
+    <div style="margin-top:6px; color:#b5ac9d;">
+        <span id="totalReviews"></span>
+    </div>
+
+</div>
+<div style="margin-top:25px;">
+
+    <label style="color:#c5a059;">Select Material</label>
+
+    <select id="materialSelect" style="
+        width:100%;
+        margin-top:10px;
+        padding:12px;
+        background:#121212;
+        color:#c5a059;
+        border:1px solid #c5a059;
+        border-radius:8px;
+    ">
+
+        <option value="">Choose Material</option>
+        <option value="18K Gold">18K Gold</option>
+        <option value="22K Gold">22K Gold</option>
+        <option value="Sterling Silver">Sterling Silver</option>
+
+    </select>
+
+</div>
+<div style="margin-top:20px;">
+
+    <label style="color:#c5a059;">Select Size</label>
+
+    <select id="sizeSelect" style="
+        width:100%;
+        margin-top:10px;
+        padding:12px;
+        background:#121212;
+        color:#c5a059;
+        border:1px solid #c5a059;
+        border-radius:8px;
+    ">
+
+        <option value="">Choose Size</option>
+        <option value="Small">Small</option>
+        <option value="Medium">Medium</option>
+        <option value="Large">Large</option>
+
+    </select>
+
+</div>
+<div class="quantity-control" style="margin-top:20px;">
+
+    <button id="decreaseQty">-</button>
+
+    <input id="quantityInput" value="1" style="width:50px; text-align:center;">
+
+    <button id="increaseQty">+</button>
+
+</div>
+                    
+                    <div class="lux-actions" style="margin-top: 2rem;">
+                        <button class="lux-btn-primary" onclick="addToCart()" style="background:#c5a059; color:#120c08; border:none; padding:1rem 2rem; border-radius:4px; font-weight:600; cursor:pointer;">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+    
+
+    <div style="display: none;">
+        <ul id="featuresList"><li><span id="feature1"></span></li><li><span id="feature2"></span></li><li><span id="feature3"></span></li></ul>
+        <span id="avgRating"></span>
+        <span id="totalReviews"></span>
+    </div>
+
+    <script>
+        function switchLuxTab(event, tabId) {
+            document.querySelectorAll('.lux-tab-pane').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.lux-tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+    </main>
+
+    <script>
+        function switchLuxTab(event, tabId) {
+            document.querySelectorAll('.lux-tab-pane').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.lux-tab-btn').forEach(b => b.classList.remove('active'));
+            
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+
+    <!-- CUSTOMER REVIEWS SECTION -->
+    <section class="reviews-section">
+        <div class="reviews-container">
+            <h2>Customer Reviews</h2>
+            
+            <div class="reviews-summary">
+                <div class="rating-summary">
+                    <div class="average-rating">
+                        <span class="rating-number" id="avgRating">4.5</span>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p id="totalReviews">Based on 245 reviews</p>
+                    </div>
+
+                    <div class="rating-bars">
+                        <div class="rating-bar">
+                            <span>5 <i class="fas fa-star"></i></span>
+                            <div class="bar">
+                                <div class="bar-fill" style="width: 70%;"></div>
+                            </div>
+                            <span class="bar-count">(172)</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>4 <i class="fas fa-star"></i></span>
+                            <div class="bar">
+                                <div class="bar-fill" style="width: 20%;"></div>
+                            </div>
+                            <span class="bar-count">(49)</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>3 <i class="fas fa-star"></i></span>
+                            <div class="bar">
+                                <div class="bar-fill" style="width: 7%;"></div>
+                            </div>
+                            <span class="bar-count">(17)</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>2 <i class="fas fa-star"></i></span>
+                            <div class="bar">
+                                <div class="bar-fill" style="width: 2%;"></div>
+                            </div>
+                            <span class="bar-count">(5)</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>1 <i class="fas fa-star"></i></span>
+                            <div class="bar">
+                                <div class="bar-fill" style="width: 1%;"></div>
+                            </div>
+                            <span class="bar-count">(2)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="write-review-btn">Write a Review</button>
+            </div>
+
+            <div class="reviews-list">
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <h5>Sarah Johnson</h5>
+                            <span class="review-date">2 weeks ago</span>
+                        </div>
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h5 class="review-title">Absolutely Perfect!</h5>
+                    <p class="review-text">The quality is exceptional. It arrived beautifully packaged and the craftsmanship is incredible. I've received so many compliments!</p>
+                    <div class="review-actions">
+                        <span class="helpful-count">👍 245 people found this helpful</span>
+                    </div>
+                </div>
+
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <h5>Michael Chen</h5>
+                            <span class="review-date">1 month ago</span>
+                        </div>
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <h5 class="review-title">Great Value for Money</h5>
+                    <p class="review-text">Excellent piece. The design is elegant and timeless. Shipping was fast and packaging was premium quality.</p>
+                    <div class="review-actions">
+                        <span class="helpful-count">👍 128 people found this helpful</span>
+                    </div>
+                </div>
+
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <h5>Emma Williams</h5>
+                            <span class="review-date">2 months ago</span>
+                        </div>
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h5 class="review-title">Best Jewelry Purchase Ever!</h5>
+                    <p class="review-text">Customer service was amazing. They helped me choose the right size and material. The final product exceeded all my expectations!</p>
+                    <div class="review-actions">
+                        <span class="helpful-count">👍 312 people found this helpful</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- YOU MAY ALSO LIKE SECTION -->
+   <section class="you-may-like">
+    <div class="you-may-like-container">
+        <h2>You May Also Like</h2>
+        <div class="related-products-grid">
+            
+            <div class="related-card" onclick="openProduct(1)">
+                <div class="related-image">
+                    <img src="images/gold-ring-1.png" alt="Classic Gold Ring">
+                </div>
+                <h4>Classic Gold Ring</h4>
+                <div class="related-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="related-price">₹24,999</span>
+            </div>
+
+            <div class="related-card" onclick="openProduct(2)">
+                <div class="related-image">
+                    <img src="images/diamond-necklace-1.png" alt="Diamond Necklace">
+                </div>
+                <h4>Diamond Necklace</h4>
+                <div class="related-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <span class="related-price">₹59,999</span>
+            </div>
+
+            <div class="related-card" onclick="openProduct(3)">
+                <div class="related-image">
+                    <img src="images/pearl_earring_1.png" alt="Pearl Earrings">
+                </div>
+                <h4>Pearl Earrings</h4>
+                <div class="related-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="related-price">₹15,999</span>
+            </div>
+
+            <div class="related-card" onclick="openProduct(4)">
+                <div class="related-image">
+                    <img src="images/bracelet-1.png" alt="Silver Bracelet">
+                </div>
+                <h4>Silver Bracelet</h4>
+                <div class="related-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <span class="related-price">₹12,999</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Lumina Jewels</h4>
+                <p>Crafting elegance since 2008</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Lumina Jewels. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="product-detail.js"></script>
+
+    <div id="imageModal" class="image-zoom-modal">
+    <span class="close-modal">&times;</span>
+    
+    <a class="modal-prev" id="modalPrevBtn">&#10094;</a>
+    <a class="modal-next" id="modalNextBtn">&#10095;</a>
+    
+    <div class="modal-content-container">
+        <img class="modal-zoom-img" id="modalTargetImg" alt="Enlarged View">
+        <div id="modalCaption" class="modal-caption"></div>
+        <div id="modalCounter" class="modal-counter"></div>
+    </div>
+</div>
+<script>
+function openLightboxCarousel() {
+    const mainImg = document.getElementById('mainImage');
+    const modal = document.getElementById('imageModal');
+    const modalTarget = document.getElementById('modalTargetImg');
+    const modalCaption = document.getElementById('modalCaption');
+    const modalCounter = document.getElementById('modalCounter');
+
+    if (!mainImg || !modal || !modalTarget) {
+        alert("Missing HTML elements! Check if you pasted the modal code at the bottom of the file.");
+        return;
+    }
+
+    // Safely get thumbnails array using the current product ID from URL
+    try {
+        const urlParams = new URLSearchParams(window.location.search);
+        const currentId = parseInt(urlParams.get('id')) || 1;
+        
+        // Pulling data directly from your products array
+        const currentProduct = products.find(p => p.id === currentId);
+
+        if (currentProduct && currentProduct.thumbnails) {
+            window.modalThumbnails = currentProduct.thumbnails;
+            
+            const matchIndex = window.modalThumbnails.indexOf(mainImg.getAttribute('src'));
+            window.currentModalIndex = matchIndex !== -1 ? matchIndex : 0;
+
+            if (modalCaption) modalCaption.textContent = currentProduct.title;
+            modalTarget.src = window.modalThumbnails[window.currentModalIndex];
+            if (modalCounter) modalCounter.textContent = `${window.currentModalIndex + 1} / ${window.modalThumbnails.length}`;
+            
+            // Show the modal
+            modal.style.display = "block";
+        }
+    } catch (err) {
+        console.error("Data error:", err);
+    }
+}
+
+// Set up navigation and closing controls once page loads
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('imageModal');
+    const modalTarget = document.getElementById('modalTargetImg');
+    const modalCounter = document.getElementById('modalCounter');
+
+    window.currentModalIndex = 0;
+    window.modalThumbnails = [];
+
+    function changeImage(direction) {
+        if (!window.modalThumbnails || window.modalThumbnails.length === 0) return;
+        window.currentModalIndex += direction;
+        
+        if (window.currentModalIndex >= window.modalThumbnails.length) window.currentModalIndex = 0;
+        if (window.currentModalIndex < 0) window.currentModalIndex = window.modalThumbnails.length - 1;
+
+        if (modalTarget) modalTarget.src = window.modalThumbnails[window.currentModalIndex];
+        if (modalCounter) modalCounter.textContent = `${window.currentModalIndex + 1} / ${window.modalThumbnails.length}`;
+    }
+
+    // Attach click events to buttons safely
+    document.getElementById('modalPrevBtn')?.addEventListener('click', (e) => { e.stopPropagation(); changeImage(-1); });
+    document.getElementById('modalNextBtn')?.addEventListener('click', (e) => { e.stopPropagation(); changeImage(1); });
+    document.querySelector('.close-modal')?.addEventListener('click', () => { modal.style.display = "none"; });
+    
+    modal?.addEventListener('click', (e) => {
+        if (e.target === modal) modal.style.display = "none";
+    });
+});
+</script>
+<script>
+    // This patch prevents the JS from crashing if it can't find certain elements
+    window.addEventListener('load', function() {
+        const dummyIDs = ['productStars', 'productCategory', 'specWeight', 'specDimensions', 'specCollection'];
+        dummyIDs.forEach(id => {
+            if (!document.getElementById(id)) {
+                console.warn('Missing element, creating dummy for: ' + id);
+                let div = document.createElement('div');
+                div.id = id;
+                div.style.display = 'none';
+                document.body.appendChild(div);
+            }
+        });
+    });
+</script>
+</body>
+</html>
