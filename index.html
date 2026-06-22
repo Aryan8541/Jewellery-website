@@ -3,12 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lumina Jewels - Luxury Jewelry Shop</title>
+    <title>MANOMAYA SPARKLES</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- NAVIGATION BAR -->
+
+<div class="top-strip">
+
+   <div class="social-icons">
+      <a href="https://wa.me/91YOURNUMBER" target="_blank">
+   <i class="fab fa-whatsapp"></i>
+        </a>
+
+    <a href="https://instagram.com/YOURUSERNAME" target="_blank">
+   <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://facebook.com/YOURPAGE" target="_blank">
+   <i class="fab fa-facebook"></i>
+    </a>
+   </div>
+
+</div>
     <nav class="navbar">
        <div class="nav-container">
         <div class="logo-branding-premium" onclick="window.location.href='index.html'">
@@ -26,136 +44,95 @@
                 <circle cx="21" cy="24" r="0.4" fill="#3a3f58"/>
             </svg>
             <div class="brand-text-luxury">
-                <h1 class="brand-title-cursive">Lumina</h1>
-                <span class="brand-subtitle-modern">jewels</span>
+                <h1 class="brand-title-cursive">MANOMAYA</h1>
+                <span class="brand-subtitle-modern">SPARKLES</span>
             </div>
         </div>
         <ul class="nav-menu">
-            <li><a href="#home" class="nav-link">Home</a></li>
-            <li><a href="#collections" class="nav-link">Collections</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#products" class="nav-link">Products</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-        
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-    </nav>
+    <li><a href="#home" class="nav-link">Home</a></li>
+    <li><a href="#about" class="nav-link">About</a></li>
+    <li><a href="#products" class="nav-link">Our Products</a></li>
+    <li><a href="#blog" class="nav-link">Blog</a></li>
+    <li><a href="#contact" class="nav-link">Contact Us</a></li>
+</ul>
 
-    <section class="hero-section">
-<div class="hero-main">
-  <div class="hero-left">
+   <div class="nav-icons">
 
-      <p class="hero-tag">
-          Jewelry That Speaks the Heart’s Language.
-      </p>
+<a href="#">
+   <i class="fas fa-search search-toggle"></i>
+</a>
 
-      <h1>
-          Elegance <br>
-          Redefined
-      </h1>
+<a href="#">
+   <i class="fas fa-shopping-bag cart-toggle"></i>
+</a>
 
-      <button class="hero-btn">
-          KNOW MORE
-      </button>
-
-  </div>
-
-  <div class="hero-right">
-      <img src="images\main-frame.png" alt="Luxury Jewelry">
-  </div>
+<div class="hamburger" id="hamburger" >
+    <span></span>
+    <span></span>
+    <span></span>
 </div>
-    <div class="luxury-features">
+</div>
+</div>
+</nav>
 
-    <div class="feature-box">
-        <div class="feature-icon">◇</div>
-        <div>
-            <h3>Premium Quality</h3>
-            <p>Finest materials crafted to perfection</p>
-        </div>
-    </div>
+    <section id="home" class="hero-section">
+<div class="hero-left">
 
-    <div class="feature-box">
-        <div class="feature-icon">✋</div>
-        <div>
-            <h3>Handcrafted</h3>
-            <p>Made with love by skilled artisans</p>
-        </div>
-    </div>
+<p class="hero-tag">
+COLLECTION JEWELRY WOMAN
+</p>
 
-    <div class="feature-box">
-        <div class="feature-icon">🛡</div>
-        <div>
-            <h3>Certified</h3>
-            <p>Authenticity & quality you can trust</p>
-        </div>
-    </div>
+<h1>
+Where elegance meets <br>
+timeless craftsmanship
+</h1>
 
-    <div class="feature-box">
-        <div class="feature-icon">🎁</div>
-        <div>
-            <h3>Elegant Packaging</h3>
-            <p>Arrives in our signature luxury packaging</p>
-        </div>
-    </div>
+<button class="hero-btn"
+onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+    KNOW MORE
+</button>
 
 </div>
+
+<div class="hero-right">
+<img src="images/main-frame.png">
+</div>
+
 </section>
 
     <!-- COLLECTIONS SECTION -->
-    <section id="collections" class="collections">
-    <h2>Our Collections</h2>
-    <div class="collections-container">
-        
-        <div class="collection-circle-card">
-            <div class="circle-image-wrapper">
-                <img src="images/gold-ring-1.png" alt="Rings">
-            </div>
-            <span class="collection-title">Rings</span>
-        </div>
+<section class="collections">
+   <h2>Our Collections</h2>
 
-        <div class="collection-circle-card">
-            <div class="circle-image-wrapper">
-                <img src="images/pearl_earring_1.png" alt="Earrings">
-            </div>
-            <span class="collection-title">Earrings</span>
-        </div>
+<div class="collection-grid">
 
-        <div class="collection-circle-card">
-            <div class="circle-image-wrapper">
-                <img src="images/bracelet-1.png" alt="Bracelets">
-            </div>
-            <span class="collection-title">Bracelets</span>
-        </div>
-
-        <div class="collection-circle-card">
-            <div class="circle-image-wrapper">
-                <img src="images/gold-necklace-1.png" alt="Necklaces">
-            </div>
-            <span class="collection-title">Necklaces</span>
-        </div>
-
-        <div class="collection-circle-card">
-            <div class="circle-image-wrapper">
-                <img src="images/nosepin-1.png" alt="Nosepins">
-            </div>
-            <span class="collection-title">Nosepins</span>
-        </div>
-
-        <div class="collection-circle-card">
-            <div class="circle-image-wrapper">
-                <img src="images/emerald-ring-1.png" alt="Custom Orders">
-            </div>
-            <span class="collection-title">Custom Orders</span>
-        </div>
-
+    <div class="collection-card">
+        <img src="images/gold-ring-1.png">
+        <p>Rings</p>
     </div>
-</section>
 
+    <div class="collection-card">
+        <img src="images/pearl_earring_1.png">
+        <p>Earrings</p>
+    </div>
+
+    <div class="collection-card">
+        <img src="images/bracelet-1.png">
+        <p>Bracelets</p>
+    </div>
+
+    <div class="collection-card">
+        <img src="images/gold-necklace-1.png">
+        <p>Necklaces</p>
+    </div>
+
+    <div class="collection-card">
+        <img src="images/emerald-ring-1.png">
+        <p>Custom Orders</p>
+    </div>
+
+</div>
+</section>
 
     <!-- ABOUT SECTION -->
 
@@ -344,48 +321,72 @@
         </div>
     </div>      
 </section>
-           
+   
+        /* BLOG & ARTICLES SECTION */
+<section id="blog" class="testimonials">
 
-    <!-- TESTIMONIALS SECTION -->
-    <section class="testimonials">
-        <h2>What Our Customers Say</h2>
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <p>"The quality and craftsmanship are absolutely exceptional. I'm in love with my ring!"</p>
-                <h4>Sarah Johnson</h4>
-            </div>
-            <div class="testimonial-card">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <p>"Best jewelry purchase ever. The necklace arrived beautifully packaged and is stunning!"</p>
-                <h4>Pooja Rajhansh</h4>
-            </div>
-            <div class="testimonial-card">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <p>"Excellent customer service and premium quality jewelry. Highly recommended!"</p>
-                <h4>Ratan Diwedi</h4>
+    <div class="blog-heading">
+        <span class="blog-mini-title">BLOG & ARTICLES</span>
+
+        <h2 class="blog-main-title">
+            Stories Behind The Sparkle
+        </h2>
+    </div>
+
+    <div class="testimonials-grid">
+
+        <div class="testimonial-card">
+            <span class="blog-category">Jewelry • Rings</span>
+
+            <h3>Crafting timeless jewelry with elegance...</h3>
+
+            <p>
+                Every piece at Manomaya begins with artistry,
+                luxury craftsmanship and attention to detail.
+            </p>
+
+            <div class="blog-footer">
+                <span>August 2025</span>
+                <a href="article1.html">READ MORE</a>
             </div>
         </div>
-    </section>
 
+        <div class="testimonial-card">
+            <span class="blog-category">Bracelets • Luxury</span>
+
+            <h3>The Art of handcrafted luxury bracelets...</h3>
+
+            <p>
+                Jewellery is more than ornamentation —
+                discover how handcrafted luxury transforms style.
+            </p>
+
+            <div class="blog-footer">
+                <span>July 2025</span>
+                <a href="article2.html">READ MORE</a>
+            </div>
+        </div>
+
+        <div class="testimonial-card">
+            <span class="blog-category">Necklaces • Diamonds</span>
+
+            <h3>Diamonds defining the new era of luxury...</h3>
+
+            <p>
+                Diamonds symbolize sophistication,
+                celebration and timeless beauty forever.
+            </p>
+
+            <div class="blog-footer">
+                <span>June 2025</span>
+                <a href="article3.html">READ MORE</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+   
     <!-- CONTACT SECTION -->
     <section id="contact" class="contact">
         <h2>Get In Touch</h2>
@@ -395,21 +396,21 @@
                     <i class="fas fa-map-marker-alt"></i>
                     <div>
                         <h4>Address</h4>
-                        <p>123 Jewelry Street, Manhattan, NY 10001</p>
+                        <p>B-31, Krishna Nagar 1st, Lalkothi Gandhinagar Mode, Jaipur</p>
                     </div>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-phone"></i>
                     <div>
                         <h4>Phone</h4>
-                        <p>+91 12345 67890</p>
+                        <p>+91-7690866666</p>
                     </div>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-envelope"></i>
                     <div>
                         <h4>Email</h4>
-                        <p>info@luminajewels.com</p>
+                        <p>manomayasparkles@gmail.com</p>
                     </div>
                 </div>
             </div>
@@ -424,7 +425,7 @@
     </section>
 
     <!-- PRODUCT MODAL -->
-    <!-- PRODUCT MODAL - PROFESSIONAL VERSION -->
+    
 <div id="productModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
@@ -528,7 +529,7 @@
                         </h4>
                     </div>
                     <div id="shippingInfo" class="info-content" style="display: none;">
-                        <p>Free shipping on orders over $100. Returns accepted within 30 days.</p>
+                        <p>Free shipping on orders over ₹1000. Returns accepted within 30 days.</p>
                     </div>
                 </div>
 
@@ -636,5 +637,20 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <!--- Search and Cart Toggle Functionality -->
+    <script>
+
+document.querySelector(".search-toggle")
+.addEventListener("click",function(){
+alert("Search opened");
+});
+
+document.querySelector(".cart-toggle")
+.addEventListener("click",function(){
+alert("Cart opened");
+});
+
+</script>
 </body>
 </html>

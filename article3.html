@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diamonds Defining Modern Luxury</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f7f5f0;
+    color:#222;
+}
+
+.article-container{
+    max-width:900px;
+    margin:auto;
+    padding:80px 30px;
+}
+
+.article-category{
+    color:#b86732;
+    letter-spacing:2px;
+    font-size:0.8rem;
+    text-transform:uppercase;
+    font-weight:600;
+}
+
+.article-title{
+    font-size:3rem;
+    font-family:'Playfair Display', serif;
+    margin:20px 0 30px;
+    line-height:1.2;
+}
+
+.article-image{
+    width:100%;
+    border-radius:12px;
+    margin-bottom:35px;
+}
+
+.article-content{
+    font-size:1.08rem;
+    line-height:1.95;
+    color:#444;
+}
+
+.share-section{
+    margin-top:45px;
+    display:flex;
+    gap:20px;
+}
+
+.share-btn{
+    border:none;
+    background:#b86732;
+    color:white;
+    padding:14px 24px;
+    cursor:pointer;
+    font-size:0.95rem;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-top:40px;
+    text-decoration:none;
+    color:#b86732;
+    font-weight:600;
+}
+
+/* ===== ARTICLE FIXED NAVBAR ===== */
+
+.article-navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:rgba(12,9,7,0.96);
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+    z-index:2000;
+    transition:0.35s ease;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.article-nav-container{
+    max-width:1300px;
+    margin:auto;
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.article-logo{
+    font-size:1.4rem;
+    font-weight:700;
+    color:#f5e6c8;
+    cursor:pointer;
+    letter-spacing:1px;
+}
+
+.article-logo span{
+    color:#c89b56;
+    font-size:0.85rem;
+    margin-left:4px;
+}
+
+.article-nav-menu{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+.article-nav-menu a{
+    text-decoration:none;
+    color:#f5e6c8;
+    transition:0.3s ease;
+}
+
+.article-nav-menu a:hover{
+    color:#c89b56;
+}
+
+.article-nav-icons{
+    color:#f5e6c8;
+    font-size:1.1rem;
+    cursor:pointer;
+}
+
+.article-nav-icons i:hover{
+    color:#c89b56;
+}
+
+/* push content below fixed navbar */
+
+.article-container{
+    padding-top:140px !important;
+}
+
+/* mobile */
+
+@media(max-width:768px){
+
+.article-nav-container{
+    padding:18px 20px;
+}
+
+.article-logo{
+    font-size:1rem;
+}
+
+.article-nav-menu{
+    display:none;
+}
+}
+/* ===NAVBAR====*/
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#0c0907;
+z-index:3000;
+padding:10px 0;
+}
+
+.nav-container{
+max-width:1400px;
+margin:auto;
+padding:0 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo-branding-premium{
+display:flex;
+align-items:center;
+gap:12px;
+cursor:pointer;
+}
+
+.brand-illustration{
+width:48px;
+height:48px;
+}
+
+.brand-title-cursive{
+font-size:2rem;
+margin:0;
+color:#c89b56;
+font-family:serif;
+}
+
+.brand-subtitle-modern{
+color:#9b8b77;
+letter-spacing:3px;
+font-size:0.75rem;
+}
+
+.nav-menu{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+.nav-link{
+text-decoration:none;
+color:#f5e6c8;
+}
+
+.nav-icons{
+display:flex;
+align-items:center;
+gap:20px;
+color:white;
+}
+
+.hamburger{
+display:none;
+cursor:pointer;
+flex-direction:column;
+gap:5px;
+position:relative;
+z-index:4000;
+}
+
+.hamburger span{
+width:24px;
+height:2px;
+background:white;
+transition:0.35s ease;
+transform-origin:center;
+}
+
+/* OPEN → X */
+
+.hamburger.active span:nth-child(1){
+transform:rotate(45deg) translate(5px,5px);
+}
+
+.hamburger.active span:nth-child(2){
+opacity:0;
+}
+
+.hamburger.active span:nth-child(3){
+transform:rotate(-45deg) translate(5px,-5px);
+}
+
+/* ===== ARTICLE PAGE MOBILE + TABLET ===== */
+
+@media(max-width:1024px){
+
+.nav-menu{
+    position:fixed;
+    top:72px;
+    right:-100%;
+    width:280px;
+    height:100vh;
+    background:#0c0907;
+    display:flex;
+    flex-direction:column;
+    padding-top:25px;
+    gap:0;
+    transition:0.4s ease;
+    z-index:3500;
+}
+
+.nav-menu.active{
+    right:0;
+}
+
+.nav-menu li{
+    width:100%;
+    list-style:none;
+    padding:22px 28px;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.nav-link{
+    color:#f5e6c8 !important;
+    text-decoration:none;
+}
+
+.hamburger{
+    display:flex;
+}
+
+.nav-container{
+    padding:0 18px;
+}
+
+.brand-title-cursive{
+    font-size:1.4rem;
+}
+
+.brand-illustration{
+    width:38px;
+    height:38px;
+}
+
+}
+</style>
+</head>
+
+<body>
+    <!-- ARTICLE NAVBAR -->
+
+<nav class="navbar">
+       <div class="nav-container">
+        <div class="logo-branding-premium" onclick="window.location.href='index.html'">
+            <svg class="brand-illustration" viewBox="0 0 100 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M42 42C51.3888 42 59 34.3888 59 25C59 15.6112 51.3888 8 42 8C32.6112 8 25 15.6112 25 25C25 34.3888 32.6112 42 42 42Z" stroke="#3a3f58" stroke-width="1.2" stroke-dasharray="0.5 1"/>
+                <path d="M26 20C27 15 32 10 39 9" stroke="#3a3f58" stroke-width="1" stroke-linecap="round"/>
+                <path d="M57 22C56 16 52 11 46 9" stroke="#3a3f58" stroke-width="1" stroke-linecap="round"/>
+                <path d="M56 50C64.2843 50 71 43.2843 71 35C71 26.7157 64.2843 20 56 20C47.7157 20 41 26.7157 41 35C41 43.2843 47.7157 50 56 50Z" stroke="#3a3f58" stroke-width="1.2"/>
+                <path d="M44 42C48 47 55 49 62 47" stroke="#c5a059" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 2"/>
+                <path d="M42 12L34 5L42 -2L50 5L42 12Z" fill="#ffffff" stroke="#3a3f58" stroke-width="1.2"/>
+                <path d="M42 -2V12M34 5H50M37 1.5L47 8.5M37 8.5L47 1.5" stroke="#3a3f58" stroke-width="0.6"/>
+                <path d="M33.5 5.5L35.5 3.5M50.5 5.5L48.5 3.5M42 -2.5V0.5" stroke="#3a3f58" stroke-width="1.5"/>
+                <circle cx="29" cy="6" r="0.6" fill="#c5a059"/>
+                <circle cx="53" cy="14" r="0.5" fill="#c5a059"/>
+                <circle cx="21" cy="24" r="0.4" fill="#3a3f58"/>
+            </svg>
+            <div class="brand-text-luxury">
+                <h1 class="brand-title-cursive">MANOMAYA</h1>
+                <span class="brand-subtitle-modern">SPARKLES</span>
+            </div>
+        </div>
+     <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="index.html#about" class="nav-link">About</a></li>
+        <li><a href="index.html#products" class="nav-link">Our Products</a></li>
+        <li><a href="index.html#blog" class="nav-link">Blog</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact Us</a></li>
+    </ul>
+
+   <div class="nav-icons">
+
+<a href="#">
+   <i class="fas fa-search search-toggle"></i>
+</a>
+
+<a href="#">
+   <i class="fas fa-shopping-bag cart-toggle"></i>
+</a>
+
+<div class="hamburger" id="hamburger" >
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+</div>
+</div>
+</nav>
+
+
+<div class="article-container">
+
+<span class="article-category">
+Diamonds • Necklaces Collection
+</span>
+
+<h1 class="article-title">
+Diamonds Defining The New Era Of Luxury
+</h1>
+
+<img src="images/gold-necklace-1.png" class="article-image">
+
+<div class="article-content">
+
+<p>
+For centuries, diamonds have represented far more than precious stones. 
+They symbolize elegance, permanence, celebration, and timeless beauty. 
+Across generations, diamond jewelry has remained one of the strongest 
+expressions of luxury, carrying emotional significance while standing as 
+a symbol of refined sophistication. At Manomaya Sparkles, we celebrate 
+this legacy by crafting diamond jewelry that blends timeless tradition 
+with modern luxury design.
+</p>
+
+<p>
+The beauty of diamonds lies not only in their brilliance but in their 
+ability to transform ordinary moments into unforgettable memories. 
+Whether gifted to celebrate milestones, worn to complement personal style, 
+or passed down through generations, diamond jewelry remains deeply connected 
+to life’s most meaningful occasions. This emotional connection is what makes 
+diamonds truly timeless.
+</p>
+
+<p>
+Modern luxury has transformed the way diamonds are designed and appreciated. 
+Today’s jewelry embraces minimal sophistication, clean settings, lightweight 
+structures, and contemporary elegance while preserving the classic brilliance 
+that diamonds naturally carry. Fine diamond necklaces now represent versatility, 
+allowing them to transition effortlessly between formal luxury and everyday elegance.
+</p>
+
+<p>
+At Manomaya Sparkles, every diamond necklace is crafted with exceptional attention 
+to precision, clarity, and aesthetic harmony. Our designs focus on timeless beauty 
+while embracing modern trends that define the future of luxury jewelry. Each creation 
+reflects our belief that true luxury should never feel temporary — it should remain 
+beautiful, meaningful, and unforgettable for generations to come.
+</p>
+
+</div>
+
+<div class="share-section">
+<button class="share-btn" onclick="shareArticle()">
+<i class="fas fa-share-alt"></i> Share Article
+</button>
+</div>
+
+<a href="index.html" class="back-btn">
+← Back To Home
+</a>
+
+</div>
+
+<script>
+
+function shareArticle(){
+
+if(navigator.share){
+
+navigator.share({
+title:"Manomaya Sparkles",
+text:"Read this luxury jewelry article",
+url:window.location.href
+});
+
+}else{
+
+navigator.clipboard.writeText(window.location.href);
+alert("Link copied to clipboard");
+
+}
+
+}
+
+</script>
+
+/*========Hamburger Menu Script========*/
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+if(hamburger && navMenu){
+
+    hamburger.addEventListener("click", function(){
+
+        navMenu.classList.toggle("active");
+        hamburger.classList.toggle("active");
+
+    });
+
+    document.querySelectorAll(".nav-link").forEach(link=>{
+
+        link.addEventListener("click", function(){
+
+            navMenu.classList.remove("active");
+            hamburger.classList.remove("active");
+
+        });
+
+    });
+
+}
+
+});
+
+</script>
+</body>
+</html>
+

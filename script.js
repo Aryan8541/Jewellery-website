@@ -227,29 +227,39 @@ formInputs.forEach(input => {
     });
 });
 
-// ============= LOADING ANIMATION =============
-// Show a loading message when page loads
-
-window.addEventListener("load", function() {
+// ============= PAGE LOAD =============
+window.addEventListener("load", function () {
     console.log("Website loaded successfully!");
-    // You can add loading animations here
 });
 
+
 // ============= MOBILE HAMBURGER MENU =============
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
+document.addEventListener("DOMContentLoaded", function(){
 
-if (hamburger) {
-    hamburger.addEventListener("click", function() {
-        navMenu.classList.toggle("active");  // Toggle menu visibility
-    });
-}
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
 
-// Close menu when clicking a link
-document.querySelectorAll(".nav-link").forEach(link => {
-    link.addEventListener("click", function() {
-        navMenu.classList.remove("active");
-    });
+    if(hamburger && navMenu){
+
+        hamburger.addEventListener("click", function(){
+
+            navMenu.classList.toggle("active");
+            hamburger.classList.toggle("active");
+
+        });
+
+        document.querySelectorAll(".nav-link").forEach(link => {
+
+            link.addEventListener("click", function(){
+
+                navMenu.classList.remove("active");
+                hamburger.classList.remove("active");
+            });
+
+        });
+
+    }
+
 });
 // ============= DIRECT LIGHTBOX CAROUSEL ENGINE =============
 let modalImageIndex = 0;
@@ -273,8 +283,7 @@ function openLightboxCarousel() {
     const targetProductData = products.find(p => p.id === activeId);
 
     if (targetProductData && targetProductData.thumbnails) {
-        modalThumbnailsList = targetProductData.thumbnails;
-        
+        modalThumbnailsList = targetProductData.thumbnails;      
         // Find which image is currently displayed on the main screen
         const currentSrc = mainImageElement.getAttribute('src');
         const matchIndex = modalThumbnailsList.indexOf(currentSrc);
@@ -282,8 +291,7 @@ function openLightboxCarousel() {
         
         // Set titles and image path links
         if (modalCaptionText) modalCaptionText.textContent = targetProductData.title;
-        targetZoomImage.src = modalThumbnailsList[modalImageIndex];
-        
+        targetZoomImage.src = modalThumbnailsList[modalImageIndex];  
         if (modalCounterText) {
             modalCounterText.textContent = `${modalImageIndex + 1} / ${modalThumbnailsList.length}`;
         }
@@ -307,8 +315,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function shiftModalImage(direction) {
         modalImageIndex += direction;
         if (modalImageIndex >= modalThumbnailsList.length) modalImageIndex = 0;
-        if (modalImageIndex < 0) modalImageIndex = modalThumbnailsList.length - 1;
-        
+        if (modalImageIndex < 0) modalImageIndex = modalThumbnailsList.length - 1; 
         if (targetZoomImage) targetZoomImage.src = modalThumbnailsList[modalImageIndex];
         if (modalCounterText) modalCounterText.textContent = `${modalImageIndex + 1} / ${modalThumbnailsList.length}`;
     }
@@ -332,3 +339,24 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target === modalContainer) modalContainer.style.display = "none";
     });
 });
+window.addEventListener("scroll", function(){
+    const navbar = document.querySelector(".navbar");
+    if(window.scrollY > 60){
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
+
+});
+
+function addToCart(){
+
+    alert("Product added to cart successfully!");
+
+}
+
+function addToWishlist(){
+
+    alert("Added to wishlist ❤");
+
+}

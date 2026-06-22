@@ -235,7 +235,6 @@ function loadProductDetails() {
       loadThumbnails(product.thumbnails);
 updateRating(product.rating, product.reviews);
 
-   loadThumbnails(product.thumbnails);
 }
 
 // ============= LOAD THUMBNAILS DYNAMICALLY =============
@@ -404,18 +403,3 @@ scrollTopBtn.addEventListener("click", function() {
     });
 });
 
-// ============= MOBILE MENU =============
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
-
-if (hamburger) {
-    hamburger.addEventListener("click", function() {
-        navMenu.classList.toggle("active");
-    });
-}
-
-document.querySelectorAll(".nav-link").forEach(link => {
-    link.addEventListener("click", function() {
-        navMenu.classList.remove("active");
-    });;
-});;
